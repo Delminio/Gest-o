@@ -1,0 +1,243 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, Arial, sans-serif;
+  background: #070707;
+  color: #f5f5f5;
+}
+
+.app {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 280px;
+  background: linear-gradient(180deg, #080808, #111);
+  border-right: 1px solid #262626;
+  padding: 28px;
+}
+
+.brand {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, #c9a45c, #80612c);
+  color: #111;
+  display: grid;
+  place-items: center;
+  border-radius: 16px;
+  font-size: 24px;
+}
+
+.brand h1 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.brand span {
+  color: #9b9b9b;
+  font-size: 12px;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+nav a {
+  color: #bdbdbd;
+  text-decoration: none;
+  padding: 14px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+nav a.active,
+nav a:hover {
+  background: #1b1b1b;
+  color: #d6b66d;
+}
+
+.main {
+  flex: 1;
+  padding: 28px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.topbar h2 {
+  margin: 0;
+  font-size: 30px;
+}
+
+.topbar p {
+  color: #999;
+  margin-top: 6px;
+}
+
+button {
+  background: linear-gradient(135deg, #d6b66d, #9b7837);
+  color: #111;
+  border: none;
+  padding: 13px 18px;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:hover {
+  filter: brightness(1.1);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.card,
+.panel {
+  background: linear-gradient(180deg, #121212, #0d0d0d);
+  border: 1px solid #242424;
+  border-radius: 22px;
+  padding: 24px;
+  box-shadow: 0 20px 50px rgba(0,0,0,.25);
+}
+
+.card-icon {
+  color: #d6b66d;
+  margin-bottom: 18px;
+}
+
+.card span {
+  display: block;
+  color: #aaa;
+  margin-bottom: 10px;
+}
+
+.card strong {
+  font-size: 34px;
+}
+
+.panel h3 {
+  margin-top: 0;
+  font-size: 24px;
+}
+
+.panel p {
+  color: #9b9b9b;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 22px;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 16px;
+  border-bottom: 1px solid #222;
+}
+
+th {
+  color: #d6b66d;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+td {
+  color: #ddd;
+}
+
+.badge {
+  padding: 7px 11px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.success {
+  background: rgba(58, 185, 118, .15);
+  color: #65d99a;
+}
+
+.warning {
+  background: rgba(255, 193, 7, .15);
+  color: #ffd666;
+}
+
+.danger {
+  background: rgba(255, 80, 80, .15);
+  color: #ff6b6b;
+}
+
+.form-row,
+.form-grid {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+input,
+select {
+  background: #090909;
+  border: 1px solid #2a2a2a;
+  color: #fff;
+  padding: 14px;
+  border-radius: 12px;
+  outline: none;
+  min-width: 220px;
+}
+
+input:focus,
+select:focus {
+  border-color: #d6b66d;
+}
+
+.section-head {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 900px) {
+  .app {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+}
